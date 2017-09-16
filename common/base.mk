@@ -637,33 +637,33 @@ WLAN += qca_cld_wlan.ko
 FSTMAN := fstman
 FSTMAN += fstman.ini
 
-PRODUCT_PACKAGES := \
-    AccountAndSyncSettings \
-    DeskClock \
-    AlarmProvider \
-    Bluetooth \
-    Calendar \
-    Camera \
-    CellBroadcastReceiver \
-    CertInstaller \
-    DrmProvider \
-    Email \
-	ExactCalculator \
-    Gallery2 \
-    LatinIME \
-    Mms \
-    Music \
-    Phone \
-    Provision \
-    QuickSearchBox \
-    Settings \
-    Sync \
-    SystemUI \
-    Updater \
-    CalendarProvider \
-    SyncProvider \
-    VoiceDialer \
-    VideoEditor
+#PRODUCT_PACKAGES := \
+#    AccountAndSyncSettings \
+#    DeskClock \
+#    AlarmProvider \
+#    Bluetooth \
+#    Calendar \
+#    Camera \
+#    CellBroadcastReceiver \
+#    CertInstaller \
+#    DrmProvider \
+#    Email \
+#    ExactCalculator \
+#    Gallery2 \
+#    LatinIME \
+#    Mms \
+#    Music \
+#    Phone \
+#    Provision \
+#    QuickSearchBox \
+#    Settings \
+#    Sync \
+#    SystemUI \
+#    Updater \
+#    CalendarProvider \
+#    SyncProvider \
+#    VoiceDialer \
+#    VideoEditor
 
 
 ifneq ($(TARGET_USES_AOSP),true)
@@ -843,11 +843,6 @@ PRODUCT_COPY_FILES += \
 
 #Enabling video for live effects
 -include frameworks/base/data/videos/VideoPackage1.mk
-
-#TODO: move to device.mk
-# dm-verity definitions
-PRODUCT_SYSTEM_VERITY_PARTITION=/dev/block/platform/soc/624000.ufshc/by-name/system
-$(call inherit-product, build/target/product/verity.mk)
 
 #skip boot jars check
 SKIP_BOOT_JARS_CHECK := true

@@ -85,6 +85,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 10737418240
 BOARD_PERSISTIMAGE_PARTITION_SIZE := 33554432
 BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
+BOARD_NEEDS_VENDORIMAGE_SYMLINK := true
 
 TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API :=true
@@ -191,7 +192,7 @@ TARGET_BOARD_KERNEL_HEADERS := device/google/marlin/kernel-headers
 # Install odex files into the other system image
 #BOARD_USES_SYSTEM_OTHER_ODEX := true
 
--include vendor/google_devices/marlin/BoardConfigVendor.mk
+-include vendor/google_devices/sailfish/BoardConfigVendor.mk
 # Build a separate vendor.img
 TARGET_COPY_OUT_VENDOR := vendor
 
