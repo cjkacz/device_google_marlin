@@ -56,6 +56,10 @@ ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_PACKAGES += TelephonyMonitor
 endif
 
+#OPENGAPPS
+GAPPS_VARIANT := mini
+PRODUCT_PACKAGES += Chrome
+
 # graphics
 #PRODUCT_PROPERTY_OVERRIDES += \
 #    ro.opengles.version=196610
@@ -608,6 +612,8 @@ PRODUCT_COPY_FILES += \
 # whitelisted app
 PRODUCT_COPY_FILES += \
     device/google/marlin/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
+
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
 
 #PRODUCT_PROPERTY_OVERRIDES += \
 #    ro.vendor.vndk.version=26.1.0 \
