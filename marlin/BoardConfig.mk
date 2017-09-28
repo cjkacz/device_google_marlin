@@ -30,8 +30,8 @@ ENABLE_CPUSETS := true
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-4.9/bin
 KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_SOURCE := kernel/google/marlin
-TARGET_KERNEL_CONFIG := marlin_defconfig
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+TARGET_KERNEL_CONFIG := pure_defconfig
+BOARD_KERNEL_IMAGE_NAME := Image.lz4-dtb
 
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_KERNEL := false
